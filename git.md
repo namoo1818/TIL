@@ -55,4 +55,6 @@ git add + 1. 파일명 2. 폴더명 3. .(전부)
 git status 해서 빨간 글씨 의미 => working dir에 있다  
 ​  
 .gitignore 사이트 > 프로그래밍 언어별로 추천해줌 그대로 복붙  
-https://www.toptal.com/developers/gitignore/  
+https://www.toptal.com/developers/gitignore/
+
+![ex_screenshot](./images/image.png)
