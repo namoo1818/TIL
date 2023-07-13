@@ -1,3 +1,6 @@
+2023.07.12  
+<스타트캠프 1일차>  
+  
 집에도 java 8버전을 깔자  
 JDK : Java Development Kit 자바 개발에 필요한 모든 것이 들어있다  
 JRE : Java Runtime Environment  
