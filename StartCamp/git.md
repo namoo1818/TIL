@@ -58,4 +58,4 @@
 > .gitignore 사이트 > 프로그래밍 언어별로 추천해줌 그대로 복붙  
 > https://www.toptal.com/developers/gitignore/
 
-![ex_screenshot](./images/image.png)
+![ex_screenshot](/images/image.png)
