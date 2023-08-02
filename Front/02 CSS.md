@@ -95,3 +95,9 @@
 - 여유 공간이 있을 때 늘어난다
 ## flex-shrink
 - 수축, 기본(1), 음수 불가능, 양수 가능
+
+
+## CSS 연습 게임 사이트
+https://flukeout.github.io/  
+https://flexboxfroggy.com/#ko
+
