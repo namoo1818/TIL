@@ -449,3 +449,6 @@ fn(1); //1
 https://www.w3schools.com/  
 https://ko.javascript.info/
 
+# 좋은 JavaScript 가이드  
+https://github.com/tipjs/javascript-style-guide  
+https://www.freecodecamp.org/news/google-publishes-a-javascript-style-guide-here-are-some-key-lessons-1810b8ad050b/
