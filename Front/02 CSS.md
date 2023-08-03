@@ -25,6 +25,7 @@
 ## box model - margin
 ![ex_screenshot](/images/margin.PNG)
 - 마진상쇄 현상 : 두 box가 있을 때 마진이 겹쳐질 수 있다. 상대방의 위치, 마진 고려 x
+- 시계방향으로 설정
 ## box model - padding
 ![ex_screenshot](/images/padding.PNG)
 ## box model - border
@@ -66,10 +67,13 @@
 - none: 기본값
 
 # (시험 출제)flexbox
-- Flexible Box module은 인터페이스 내의 아이템 간 공간 배분과 강력한 정렬 기능을 제공하기 위한 1차원 레이아웃 모델로 설계
-![ex_screenshot](/images/flexbox.png)
+- Flexible Box module은 인터페이스 내의 아이템 간 공간 배분과 강력한 정렬 기능을 제공하기 위한 1차원 레이아웃 모델로 설계  
+![ex_screenshot](/images/flexbox.png)  
+
+참고 : https://heropy.blog/2018/11/24/css-flexible-box/
+
 ## 주요 개념
-- Main Axios(주축), Cross Axios(교차축)
+- Main Axis(주축), Cross Axis(교차축)
 - 시작선(start), 끝선(end)
 - Container와 item
 
@@ -77,14 +81,14 @@
 - display 속성을 이용하여 container를 생성
 - display flex; -> block 성격의 container
 - display: inline-flex; -> inline 성격의 container
-![ex_screenshot](/images/flex_container.PNG)
+![ex_screenshot](/images/flex_container.PNG)  
 
 ## Flex Item
 ![ex_screenshot](/images/flex_item.PNG)
 
 - align-items : 교차축에 대한 정렬, 한줄일 때
 - align-content : 여러 줄일 때
-- align-items와 align-content 사이에 충돌이 생길 수 있다
+- align-items와 align-content 사이에 충돌이 생길 수 있다  
 
 ## flex-basis
 - 아이템 크기 지정
