@@ -39,6 +39,7 @@ Array, List <-> []
 - Java 객체를 JSON 표현으로 변환하는 데 사용할 수 있는 라이브러리다.
 - JSON 문자열을 JAVA 객체로, JAVA 객체를 JSON 문자열로 변환하는 간단한 방법을 제공한다. (toJson(), fromJson())
 - Gson을 사용하기 위해서 라이브러리를 다운받고 프로젝트에 인식시켜야 한다.
+- JavaScript에서는 디폴트로 적용되어 있지만 Java에서 쓰려면 따로 라이브러리를 다운받아야 한다.
 ```
 JSON.stringify() => toJson()
 JSON.parse() => fromJson()
@@ -47,3 +48,5 @@ JSON.parse() => fromJson()
 ```
 Gson gson = new Gson();
 ```
+- 객체 -> JSON 문자열 : gson.toJson()
+- JSON 문자열 -> 객체 : gson.fromJson()
