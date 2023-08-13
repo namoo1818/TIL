@@ -38,7 +38,8 @@ return false;
 
 # 선택 정렬(Selection Sort)
 ![SelectionSort](https://github.com/namoo1818/TIL/assets/50236187/023a5426-7ed9-4eeb-8e46-52a1a2bdfc88)  
-해당 순서에 원소를 넣을 위치는 이미 정해져 있고, 어떤 원소를 넣을지 선택하는 알고리즘
+해당 순서에 원소를 넣을 위치는 이미 정해져 있고, 어떤 원소를 넣을지 선택하는 알고리즘  
+주어진 자료들 중 가장 작은 값의 원소부터 차례대로 선택하여 위치를 교환하는 방식  
 - 제자리 정렬(in-place sorting) 알고리즘의 하나
 - 시간복잡도 $O(n^2)$
 ```java
