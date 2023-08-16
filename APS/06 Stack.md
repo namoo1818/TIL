@@ -20,14 +20,38 @@
 > - Stack<Boolean> stackBool = new Stack<>();
 
 ## 메서드
-- push() : 해당 값을 stack의 top에 삽입
+- push(), add() : 해당 값을 stack의 top에 삽입
 - pop() : stack의 top의 값을 삭제하고 반환
 - peek() : stack의 top의 값 반환(제거x)
 - isEmpty() : stack이 비어있으면 true / 아니면 false
 - clear() : 전체 값 제거(초기화)
 - size() : stack의 크기 반환
 - contains() : stack에 해당 원소가 있으면 true / 아니면 false
-- search() : 해당 원소의 위치를 반환(top의 위치는 1, 해당 원소가 없으면 -1 반환)
+- search() : 해당 원소의 위치(**빠져나오는 순서**)를 반환(top의 위치는 1, 해당 원소가 없으면 -1 반환)
+
+```java
+class StackEx {
+    public static void main(String[] args) {
+        Stack<Integer> stackInt = new Stack<>();
+
+        stackInt.push(1);
+        stackInt.push(2);
+        stackInt.push(3);
+        stackInt.push(1);
+        // [1, 2, 3, 1]
+
+        System.out.println(stackInt.search(2));
+        System.out.println(stackInt.search(1));
+        System.out.println(stackInt.search(4));
+    }
+}
+```
+```java
+// 출력
+3
+1
+-1
+```
 
 ## 구현
 ```java
