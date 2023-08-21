@@ -83,16 +83,13 @@ Comparable 또는 Comparator 사용
 - 평균 시간복잡도 O($n^2$)
 - 최선 시간복잡도 O($n$) `이미 정렬된 경우`
 ```java
-public class InsertionSort {
-	public static void main(String[] args) {
-		int[] data = { 69, 10, 30, 2, 16, 8, 31, 22 };
-		for (int i = 1; i < data.length; i++) {
-			int key = data[i]; 
-			for (int j = i - 1; j >= 0; j++) {
-				data[j+1] = data[j];		
-			} 
-		}
+int[] data = { 69, 10, 30, 2, 16, 8, 31, 22 };
+for (int i = 1; i < data.length; i++) {
+	int key = data[i]; 
+	for (int j = i - 1; j >= 0 && key < data[j]; j++) {
+		data[j+1] = data[j];		
 	}
+	data[j+1] = key;
 }
 ```
 
