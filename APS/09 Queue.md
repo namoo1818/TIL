@@ -23,37 +23,37 @@ public static int size = queue.length;
 public static int front = 0, rear = 0;
 
 public static boolean isEmpty() {
-		return front == rear;
-	}
+	return front == rear;
+}
 
-	// 포화상태 
-	// rear에서 한칸 더 진행한 곳이 front가 가리키는 곳이라면 포화상태
-	public static boolean isFull() {
-		return front == (rear+1)%size;
-	}
+// 포화상태 
+// rear에서 한칸 더 진행한 곳이 front가 가리키는 곳이라면 포화상태
+public static boolean isFull() {
+	return front == (rear+1)%size;
+}
 
-	// 삽입 : boolean / 자료형 / void
-	public static void enQueue(String item) {
-		// 배열로 만들었을 때 (연결리스트로 만들었다면 생략 가능)
-		if (isFull()) {
-			System.out.println("가득 차서 더 이상 넣을 수 없다!");
-			return;
-		}
-		// 넣는 행위를 하려면
-		rear = (rear+1)%size;
-		queue[rear] = item;
+// 삽입 : boolean / 자료형 / void
+public static void enQueue(String item) {
+	// 배열로 만들었을 때 (연결리스트로 만들었다면 생략 가능)
+	if (isFull()) {
+		System.out.println("가득 차서 더 이상 넣을 수 없다!");
+		return;
 	}
+	// 넣는 행위를 하려면
+	rear = (rear+1)%size;
+	queue[rear] = item;
+}
 
-	// 삭제
-	public static String deQueue() {
-		// 공백쳌은 꼭 필요
-		if (isEmpty()) {
-			System.out.println("공백상태 입니다.");
-			return null;
-		}
-		front = (front+1)%size;
-		return queue[front];
+// 삭제
+public static String deQueue() {
+	// 공백쳌은 꼭 필요
+	if (isEmpty()) {
+		System.out.println("공백상태 입니다.");
+		return null;
 	}
+	front = (front+1)%size;
+	return queue[front];
+}
 ```
 
 # 우선순위 큐
