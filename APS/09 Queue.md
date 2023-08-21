@@ -85,7 +85,8 @@ Comparable 또는 Comparator 사용
 ```java
 int[] data = { 69, 10, 30, 2, 16, 8, 31, 22 };
 for (int i = 1; i < data.length; i++) {
-	int key = data[i]; 
+	int key = data[i];
+	int j;
 	for (int j = i - 1; j >= 0 && key < data[j]; j++) {
 		data[j+1] = data[j];		
 	}
