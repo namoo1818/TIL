@@ -74,3 +74,16 @@ jsp 나중에 관통 프로젝트에는 쓰지 않는다
 
 면접 질문
 크롬을 키고 네이버에 "구글"을 검색했습니다. 무슨 일이 발생하나요?
+
+![서블릿3](https://github.com/namoo1818/TIL/assets/50236187/4cb65d8f-c4fc-49a2-9e7e-9889f1d84303)
+![캡처](https://github.com/namoo1818/TIL/assets/50236187/3eec5ca7-e9f8-4e7a-9125-1824a387becc)
+![서블릿](https://github.com/namoo1818/TIL/assets/50236187/ffd2d79e-2519-469b-8f08-c71a82d22c21)
+![jj](https://github.com/namoo1818/TIL/assets/50236187/fcb0945d-f2f4-44e5-8a32-7816a21b47bd)
+![ffd](https://github.com/namoo1818/TIL/assets/50236187/21822c84-f983-467d-8062-7db384886601)
+![d](https://github.com/namoo1818/TIL/assets/50236187/74c207a9-365f-47c1-90f9-42288ab307b0)
+![서블릿2](https://github.com/namoo1818/TIL/assets/50236187/4b2d9dd3-6349-49ee-ab40-23d3793c0b43)
+![action](https://github.com/namoo1818/TIL/assets/50236187/f7112b0f-2d23-46c4-82f5-c243eed528b9)
+![url](https://github.com/namoo1818/TIL/assets/50236187/a4f7063a-12e2-4e72-8ef1-0ee38f050220)
+
+
+
