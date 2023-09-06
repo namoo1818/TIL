@@ -135,6 +135,8 @@ disp.forward(req, resp);
 ![리다이렉트 방식](https://github.com/namoo1818/TIL/assets/50236187/ffc44e78-4149-4e1f-bc64-171b30a243ad)
 - 여러 서버에서 가능
 - 새로운 요청이 들어오면 request, response 통로도 계속 새로 만듦
+- 리다이렉트는 특별한 상황에서만 사용
+- 입력을 받아 목록에 추가하는 경우 리다이렉트는 통로가 계속 새로 만들어지므로 불가능
 ```
 resp.sendRedirect(req.getContextPath()+"/result.jsp?");
 ```
