@@ -4,6 +4,8 @@
 ![framework1](https://github.com/namoo1818/TIL/assets/50236187/883f5747-50e8-4914-b7be-6fd3c5a0f6de)
 ![framework2](https://github.com/namoo1818/TIL/assets/50236187/df838bbf-c8fa-4712-a59c-39baa9a20a46)
 ![framework3](https://github.com/namoo1818/TIL/assets/50236187/eaf3f65c-0d69-4405-b95e-e94c6bb838f2)
+- POJO: Java로 생성하는 순수한 객체
+- 클래스가 다른 기술에 상속되거나 종속되지 않음
 ![framework4](https://github.com/namoo1818/TIL/assets/50236187/55fbf4a3-e526-404e-bd63-ba1570d4ea36)
 ![framework5](https://github.com/namoo1818/TIL/assets/50236187/62cae0e6-d4bd-4a41-a164-83c246396f9e)
 
