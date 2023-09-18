@@ -107,6 +107,13 @@ public static String itoa(int value) {
   return text;
 }
 ```
+
+## 입력
+- next(): 띄어쓰기가 나오기 전까지 읽음
+- nextLine(): 한줄 통채로 읽음 개행문자도 읽음
+- charAt(index): 문자열 중 한 글자만 char타입으로 
+- tocharArray(): 문자열을 char 배열로
+
 ## 패턴 매칭
 - 본문 문자열에 찾으려는 문자 패턴이 있는지 탐색
 - 우리는 브루트포스로 풀겠다(시간복잡도 O(MN))
@@ -156,3 +163,7 @@ public static int bruteForceFor(String t, String p) {
 - 대부분의 상용 소프트웨어에서 채택하고 있는 알고리즘
 - 문자 패턴의 오른쪽 끝에 있는 문자가 불일치하고 이 문자가 패턴 내에 존재하지 않는 경우, 이동거리는 무려 패턴의 길이!  
 ![보이어-무어-알고리즘](https://github.com/namoo1818/TIL/assets/50236187/6158064e-8b30-4e6e-be00-64680c56eb27)
+
+## 다른 패턴 매칭
+- KMP(보어 함수)
+- 카프 라빈(Karp)
