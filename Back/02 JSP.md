@@ -3,7 +3,7 @@
 - Java Server Page
 - Servlet 표준을 기반으로 작성된 웹 어플리케이션 개발 언어
 - HTML 내에 Java를 작성하여 동적으로 웹페이지를 생성하여 브라우저에게 돌려주는 페이지
-- **실행 시 Servlet으로 변환된 후 실행**
+- ⭐**실행 시 Servlet으로 변환된 후 실행**
 - Servle 내에서 HTML 작성하기 꽤 불편했다 -> Java로 작성하고 HTML에 넣어주자
 
 # 서버 웹페이지 작동 원리
