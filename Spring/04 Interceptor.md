@@ -293,3 +293,25 @@ UTF-8
 
 # Interceptor 흐름
 ![interceptor 흐름](https://github.com/namoo1818/TIL/assets/50236187/58eeca76-48db-4d00-98f1-4457a4d12d21)
+
+
+- servlet-context : 웹과 관련된 설정이 들어있다
+- root-context : 웹 이외의 설정이 들어있다  
+
+AInterceptor, BInterceptor, CInterceptor를 차례대로 servlet-context.xml에 등록할 경우
+
+```
+A : preHandle
+B : preHandle
+C : preHandle
+C : postHandle
+B : postHandle
+A : postHandle
+C : afterCompletion
+B : afterCompletion
+A : afterCompletion
+```
+
+- \<a href="regist">게시글 등록</a>
+- 마지막 / 다음으로 regist가 붙음
+- http://localhost:8080/mvc/regist
