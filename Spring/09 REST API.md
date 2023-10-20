@@ -74,7 +74,7 @@
 ```java
 @Controller
 public class TestController1 {
-//	http://localhost:8080/mvc/rest1/test1 : 404 뷰리졸버가 반환된 문자열을 가지고 View 를 찾으려고 해서...
+//	http://localhost:8080/mvc/rest1/test1 : 404 에러 화면, 뷰리졸버가 반환된 문자열을 가지고 View 를 찾으려고 해서...
 	@GetMapping("/rest1/test1")
 	public String test1() {
 		return "hi rest";
@@ -90,3 +90,86 @@ public class TestController1 {
 }
 ```
 - localhost:8080은 톰캣이 자동으로 설정해준다
+
+- 406 에러. 왜? Map 형태의 데이터를 리턴해서. JSON 형태로 바꿔져야 한다
+```java
+// http://localhost:8080/mvc/rest1/test3 : 406 에러. 데이터를 JSON 형태로 바꿔야 한다 
+@ResponseBody
+@GetMapping("/rest1/test3")
+public Map<String, String> test3() {
+	// 키 벨류 형태를 가지고 있는 앱을 반환
+	Map<String, String> data = new HashMap<String, String>();
+	
+	data.put("id", "ssafy");
+	data.put("password", "1234");
+	data.put("name", "양띵균");
+	return data;
+}
+```
+- JSON 형변환을 위해 pom.xml에 jackson-databind 추가
+```xml
+<!-- JSON 형변환을 위하여 -->
+<dependency>
+	<groupId>com.fasterxml.jackson.core</groupId>
+	<artifactId>jackson-databind</artifactId>
+	<version>2.14.2</version>
+</dependency>
+```
+- JACKSON이 알아서 Map을 JSON 형태로 바꿈
+![200](https://github.com/namoo1818/TIL/assets/50236187/677cac8a-b2a9-42e1-a4f8-dcf1cb3b322d)
+- DTO 객체, 리스트도 JACKSON이 알아서 JSON 형태로 바꿔준다 잭슨 짱!
+```java
+//http://localhost:8080/mvc/rest1/test4 : 잭쓴이 DTO오 알아서 JSON으로 바꿔서 보내주는군 GOOD!
+@ResponseBody
+@GetMapping("/rest1/test4")
+public User test4() {
+	User user = new User("ssafy", "1234", "양띵균");
+	return user;
+}
+
+//http://localhost:8080/mvc/rest1/test5 : LIST 도 반환 해주나?
+@ResponseBody
+@GetMapping("/rest1/test5")
+public List<User> test5() {
+	List<User> list = new ArrayList<>();
+	list.add(new User("ssafy", "1234", "양띵균"));
+	list.add(new User("hyunsoo", "3141592", "조현수"));
+	list.add(new User("s4253541", "secret", "조용환"));
+	list.add(new User("enugg", "1234", "김은지"));
+	list.add(new User("dawon", "1008", "차다운"));
+	
+	return list;
+}
+```
+- 아...쓰읍...메서드마다 @ResponseBody 붙이는거 에반데...
+- @RestController를 사용하면 @ResponseBody 안써도 된다
+- RestController가 있어서 test1도 실행된다 @ResponseBody가 붙어있는 것과 같기 때문에
+```java
+@RestController
+@RequestMapping("/rest2")
+public class TestController2 {
+//	http://localhost:8080/mvc/rest2/test1 : RestController가 있어서 test1도 실행된다  @ResponseBody가 붙어있는 것과 같다
+	@GetMapping("/test1")
+	public String test1() {
+		return "hi rest";
+	}
+	
+//	http://localhost:8080/mvc/rest2/test2 : @ResponseBody를 붙여서 JSP 화면으로 반환하는게 아니라 데이터 그자체를 반환
+	@GetMapping("/test2")
+	public String test2() {
+		return "hi rest";
+	}
+	
+//	http://localhost:8080/mvc/rest2/test3 : 406 에러. 데이터를 JSON 형태로 바꿔야 한다 
+	@GetMapping("/test3")
+	public Map<String, String> test3() {
+		// 키 벨류 형태를 가지고 있는 앱을 반환
+		Map<String, String> data = new HashMap<String, String>();
+		
+		data.put("id", "ssafy");
+		data.put("password", "1234");
+		data.put("name", "양띵균");
+		return data; //jackson-databind을 추가해주었더니 map을 알아서 json으로 바꿔서 줌
+	}
+...
+```
