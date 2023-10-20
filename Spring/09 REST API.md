@@ -173,3 +173,93 @@ public class TestController2 {
 	}
 ...
 ```
+- GET, POST, PUT, DELETE 다 가능
+```java
+@RestController
+@RequestMapping("/rest3")
+public class TestController3 {
+//	http://localhost:8080/mvc/rest3/test1 
+	@GetMapping("/test1")
+	public String test1() {
+		return "hi GET";
+	}
+	
+//	http://localhost:8080/mvc/rest3/test2 
+	@PostMapping("/test2")
+	public String test2() {
+		return "hi POST";
+	}
+	
+//	http://localhost:8080/mvc/rest3/test3 
+	@PutMapping("/test3")
+	public String test3() {
+		return "hi PUT";
+	}
+	
+//	http://localhost:8080/mvc/rest3/test4 
+	@DeleteMapping("/test4")
+	public String test4() {
+		return "hi DELETE";
+	}
+	
+}
+```
+- 게시글 조회 방법 1
+```java
+	// REST API에서 Detail 같은 페이지에 들어가고 싶어? id=ssafy (x)
+//	http://localhost:8080/mvc/rest4/board/1
+//	http://localhost:8080/mvc/rest4/board/2
+//	http://localhost:8080/mvc/rest4/board/99
+	
+@GetMapping("/board/{id}")
+public String test1(@PathVariable int id) {
+	return id+": come on";
+}
+```
+- 게시글 조회 방법 2
+```java
+// id와 no가 같다는 걸 알려줘야 한다: @PathVariable("id")
+@GetMapping("/board/{id}")
+public String test1(@PathVariable("id") int no) {
+	return no+": come on";
+}
+```
+- 게시글 등록
+```java
+// http://localhost:8080/mvc/rest4/board
+// 게시글 등록
+@PostMapping("/board")
+public String test2(User user) {
+	return user.toString();
+}
+```
+![post](https://github.com/namoo1818/TIL/assets/50236187/d16de4ba-9f7f-410a-89f6-e47d2f9c7d5c)
+
+- @RequestBody : JSON 형태로 보낼 때
+```java
+@PostMapping("/board")
+public String test3(@RequestBody User user) {
+	return user.toString();
+}
+```
+```json
+{
+	"name" : "lee",
+	"id" : "ssafy",
+	"password" : "12345"
+}
+```
+![json](https://github.com/namoo1818/TIL/assets/50236187/6b01fcc2-9943-4b1b-b8a9-cbf01088c664)
+- ResponseEntity : 데이터 응답시 [상태코드, 헤더, 데이터] 설정이 가능
+- HEADERS에서 auth이 admin이 되었다
+```java
+@GetMapping("/test4")
+public ResponseEntity<String> test4() {
+	HttpHeaders headers = new HttpHeaders();
+	
+	headers.add("auth", "admin");
+	// 응답하려고 하는 데이터, 응답 상태코드, 응답 헤더 같은 것들...
+	return new ResponseEntity<String>("OK data", headers, HttpStatus.OK);
+}
+```
+![test4](https://github.com/namoo1818/TIL/assets/50236187/d47aafd3-98c0-48c9-ab4d-5629fd69dcc3)
