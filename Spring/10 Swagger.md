@@ -102,6 +102,25 @@ public class BoardRestController {
 
 # Swagger 적용
 - pom.xml에 swagger2, swagger-ui dependency 추가. 그리고 servlet-context.xml에 resources 매핑
+- pom.xml
+```xml
+<dependency>
+	<groupId>io.springfox</groupId>
+	<artifactId>springfox-swagger2</artifactId>
+	<version>3.0.0</version>
+</dependency>
+<dependency>
+	<groupId>io.springfox</groupId>
+	<artifactId>springfox-swagger-ui</artifactId>
+	<version>3.0.0</version>
+</dependency>
+```
+- servlet-context.xml
+```xml
+<resources mapping="/swagger-ui/**" location="classpath:/META-INF/resources/webjars/springfox-swagger-ui/" ></resources>
+
+<beans:bean id="swaggerConfig" class="com.ssafy.board.config.SwaggerConfig"/>
+```
 - 스프링부트에서는 위에 두개 대신 springfox-boot-starter를 추가하면 된다
 - http://localhost:8080/context-path/swagger-ui/index.html
 
