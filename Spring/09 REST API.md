@@ -263,3 +263,6 @@ public ResponseEntity<String> test4() {
 }
 ```
 ![test4](https://github.com/namoo1818/TIL/assets/50236187/d47aafd3-98c0-48c9-ab4d-5629fd69dcc3)
+
+# 기타
+- http status code mdn : HTTP 상태 코드 문서
