@@ -359,7 +359,7 @@ xhr.onreadystatechange = function () {
 ```
 
 - data 받아서 화면에 출력하기
-- LiveServer로 켜야 데이터를 가져올 수 있다.
+- LiveServer로 켜야 데이터를 가져올 수 있다.(단축키: alt + L + O)
 ```javascript
 <!DOCTYPE html>
 <html lang="ko">
